@@ -1,0 +1,4 @@
+fastapi['full']
+pytube
+youtube-search-python
+fastapi-jwt-auth
