@@ -7,7 +7,7 @@ from functions import play_next, song_url, tube_dl
 
 API_KEY = "ACM-VITxD"
 bot = commands.Bot(command_prefix=".")
-token = "OTQ1NzgwNjUxNjUzNzM4NTE2.YhVI3w.EtZH8RdQtFsayqYSMzeqUuJ3vtk"
+token = "" # bot token here
 queue = Queue()
 number = 0
 
