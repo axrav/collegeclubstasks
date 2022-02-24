@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Timer App</string>
+    <string name="start">Start</string>
+    <string name="_00_00_00">00:00:00</string>
+    <string name="hh_mm_ss">"HHMMSS"</string>
+    <string name="hh_mm_sss">HH MM SS</string>
+</resources>
