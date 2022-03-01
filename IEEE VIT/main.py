@@ -8,7 +8,8 @@ from pydantic import BaseModel
 from functions import song_url, tube_dl
 
 app = FastAPI(docs_url=None, redoc_url=None)
-
+import re
+reg = r"^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
 
 class User(BaseModel):
     username: str
@@ -42,6 +43,8 @@ admin = {"username": "Aarav", "password": "FFFFFF"}
 # Signup Part
 @app.post("/signup", status_code=201)
 def signup(user: User):
+    if not re.match(reg, user,password):
+        return {"error": "Your password format is incorrect, your password should contain 8 characters with a number and a special character"}
     new_u = {"username": user.username, "password": user.password}
     Total.append(new_u)
 
