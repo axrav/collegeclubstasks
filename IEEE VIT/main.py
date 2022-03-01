@@ -43,7 +43,7 @@ admin = {"username": "Aarav", "password": "FFFFFF"}
 # Signup Part
 @app.post("/signup", status_code=201)
 def signup(user: User):
-    if not re.match(reg, user,password):
+    if not re.match(reg, user.password):
         return {"error": "Your password format is incorrect, your password should contain 8 characters with a number and a special character"}
     new_u = {"username": user.username, "password": user.password}
     Total.append(new_u)
